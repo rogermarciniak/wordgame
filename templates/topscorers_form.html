@@ -1,0 +1,26 @@
+{% extends "challenge.html" %}
+
+{% block body %}
+		<b>Be proud, you can perform tasks for kids!</b><br><br>
+        <h3> Top Scorers </h3>
+        <table>
+        	<tr>
+        		<th> Name </th>
+        		<th> Score </th>
+        	</tr>
+        		{% for name, score in score_top10 %}
+            		<tr>
+            			<td>{{ name }}</td>
+            			<td>{{ score }}</td>
+      				</tr>
+      			{% endfor %}
+		</table>
+		<br>
+		<form class="form-style" action="/">
+			{{ message }}
+			<br><br>
+    		<input type="submit" value="Try Again?" />
+		</form>
+{% endblock %}
+
+ 

@@ -1,0 +1,15 @@
+<html>
+    <head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+    	<center>
+			<h2>{{ header }}</h2>			
+    	    {% block body %}
+    	    {% endblock %}
+    		Copyright 2016 (c) by IT Carlow.<br>
+			created by Roger Marciniak
+		</center>
+    </body>
+</html>

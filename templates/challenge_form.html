@@ -1,0 +1,42 @@
+{% extends "challenge.html" %}
+
+{% block body %}
+		<form class="form-style" action='/'>
+		<b>Game rules</b><br>
+			<div style="text-align:justify;">
+				Enter seven 3+ letter words,
+				using letters from the word generated
+				below, but not source word itself!
+				No duplicates!<br>
+			</div>
+			<h3>Word: {{ session['source_word'] }} </h3>
+			<input type="submit" value="Reroll!" required><br>
+        </form>
+        
+        <form class="form-style" action='/processform' method='POST'>
+           	<b>Be quick! The time is running!</b><br><br>
+           	<label for='word_1'>
+            <span>Word 1: <input type="text" name="word_1" required>
+            </label><br>
+            <label for='word_2'>
+            <span>Word 2: <input type="text" name="word_2" required>
+			</label><br>
+			<label for='word_3'>
+			<span>Word 3: <input type="text" name="word_3" required>
+			</label><br>
+			<label for='word_4'>
+			<span>Word 4: <input type="text" name="word_4" required>
+			</label><br>
+			<label for='word_5'>
+			<span>Word 5: <input type="text" name="word_5" required>
+			</label><br>
+			<label for='word_6'>
+			<span>Word 6: <input type="text" name="word_6" required>
+			</label><br>
+			<label for='word_7'>
+			<span>Word 7: <input type="text" name="word_7" required>
+            </label><br>
+            <input type="submit" value="Send Words!" required>
+        </form><br>
+{% endblock %}
+

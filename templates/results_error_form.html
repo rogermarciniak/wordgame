@@ -1,0 +1,28 @@
+{% extends "challenge.html" %}
+
+{% block body %}
+		<b>Some words caused errors,</b><br>
+		<b>You're useless!</b><br>
+ 		<br>   
+        <table>
+			<th>Invalid Words:</th>
+        	{% for item in invalid %}
+        		<tr>
+        			<td> {{ item }} </td>
+        		</tr>
+       		{% endfor %}
+		</table>
+		<br>
+		<form class="form-style" action="/">
+			<b>Tips</b><br>
+			<div style="text-align:justify;">
+				Make sure that the words are not the source word,
+				or are not a duplicate,
+				and that they are at least 3 letters long,
+				and made up of letters from the source word!<br>
+			</div>
+			<br>
+    		<input type="submit" value="Humilate yourself once more" />
+		</form>
+		<br><br>	
+{% endblock %}
